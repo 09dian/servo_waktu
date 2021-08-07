@@ -17,10 +17,10 @@ Serial.println("ARos loaded succesfully");
 Serial.println("-------------------------");
 myservo.attach(9);
 Serial.println("calibrating servo...");
-for(pos = 0; pos <= 180; pos += 1)
+for(pos = 0; pos <= 360; pos += 1)
 myservo.write(0);
 delay(1000);
-myservo.write(180);
+myservo.write(360);
 delay(1000);
 myservo.write(90);
 delay(1000);
@@ -33,7 +33,7 @@ Serial.println("-------------------------");
 
 void loop() {
   
-for(pos = 0; pos <= 180; pos += 1)
+for(pos = 0; pos <= 360; pos += 1)
 if (Serial.available())
 
 
